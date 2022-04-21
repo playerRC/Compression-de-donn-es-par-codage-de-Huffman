@@ -20,7 +20,8 @@ def volume_finale(doc):
     return nb_octet
 
 def ratio(doc):
-    return 1 - volume_finale(doc)/volume_initial(doc)
+    taux = 1 - volume_finale(doc)/volume_initial(doc)
+    return round(taux, 3)
 
 def nb_bits_moyen(doc):
     sm = 0
@@ -28,7 +29,8 @@ def nb_bits_moyen(doc):
     d = cod.dic_codage_caractere(cod.arbre.get_root())
     for cle in d:
         sm += len(d[cle])
-    return sm/len(fr.alphabet(doc))
+    bit_moyen = sm/len(fr.alphabet(doc))
+    return round(bit_moyen, 3)
 
 
 # pour vol_ini et final : https://www.youtube.com/watch?v=co4_ahEDCho
