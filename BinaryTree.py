@@ -26,7 +26,14 @@ class BTree():
 
         node_list = [BNode(freq, label) for label, freq in fr.dict_frequences(document).items()]
 
-       
+        while len(node_list) > 1:
+            node_list = sorted(node_list, key=lambda node: node.freq)
+            left_node = node_list.pop(0)
+            right_node = node_list.pop(0)
+            parent_node = BNode(left_node.getOccurence() + right_node.getOccurence())
+            parent_node.leftChild = left_node
+            parent_node.rightChild = right_node
+            node_list.append(parent_node)       
 
         self.root = node_list[0]
 
