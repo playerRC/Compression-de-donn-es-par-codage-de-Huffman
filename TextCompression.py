@@ -19,7 +19,7 @@ with open(doc+"_freq.txt", "w") as file:
 
 with open(doc+"_comp.bin", "w") as file:
     c = cod.Codage(bt.BTree(doc2))
-    c.dic_codage_caractere(c.arbre.get_root())
+    dict_codage_caractere = c.dic_codage_caractere(c.arbre.get_root())
     compressed_text = c.codage_texte()
     file.write(compressed_text)
 
