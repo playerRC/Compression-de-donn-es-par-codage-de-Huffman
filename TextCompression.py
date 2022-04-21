@@ -22,3 +22,9 @@ with open(doc+"_comp.bin", "w") as file:
     c.dic_codage_caractere(c.arbre.get_root())
     compressed_text = c.codage_texte()
     file.write(compressed_text)
+
+print(f'''\nDictionnaire du nombre d'apparitions de chaque caractère: {fr.dict_frequences(doc2)}
+Dictionnaire du codage de chaque caractère: {dict_codage_caractere}
+Taux de compression atteint: {tc.ratio(doc2)}
+Nombre moyen de bits de stockage d’un caractère: {tc.nb_bits_moyen(doc2)}\n'''
+)
