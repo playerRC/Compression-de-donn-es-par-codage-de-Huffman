@@ -3,31 +3,32 @@ import Codage as cd
 import BinaryTree as bt
 
 def volume_initial(doc):
-    nb=0
-    file = open(doc, "r")
-    for line in file:
-        for caracter in line:
-            nb += 1
-    return nb
+    nb_octet=0
+    d1 = fr.dict_frequences(doc)
+    for caractere in d1:
+        nb_octet += d1[caractere]
+    return nb_octet
 
 def volume_finale(doc):
-    bit1 = 0
-    bit2 = 8 * len(fr.alphabet(doc))
+    nb_bit = 0
     cod = cd.Codage(bt.BTree(doc))
     d1 = fr.dict_frequences(doc)
     d2 = cod.dic_codage_caractere(cod.arbre.get_root())
-    for cle in d2:
-        bit1 += len(d2[cle]) * d1[cle]
-    for cle in d2:
-        bit2 += len(d2[cle])
-    return (bit1 + bit2)/8
+    for caractere in d2:
+        nb_bit += len(d2[caractere]) * d1[caractere]
+    nb_octet = nb_bit/8
+    return nb_octet
 
 def ratio(doc):
-    return 1 - (volume_finale(doc)/volume_initial(doc))
+    return 1 - volume_finale(doc)/volume_initial(doc)
 
-print(ratio("exemple.txt"))
-gain_volume = ratio("exemple.txt") * volume_initial("exemple.txt")
-print(gain_volume)
+def nb_bits_moyen(doc):
+    sm = 0
+    cod = cd.Codage(bt.BTree(doc))
+    d = cod.dic_codage_caractere(cod.arbre.get_root())
+    for cle in d:
+        sm += len(d[cle])
+    return sm/len(fr.alphabet(doc))
 
 
 # pour vol_ini et final : https://www.youtube.com/watch?v=co4_ahEDCho
