@@ -30,21 +30,7 @@ def dict_frequences(document):
     file.close()
     return dict(sorted(dic.items(), key=lambda frequence: frequence[1]))
     
-def liste_frequences(document):
-    l=[]
-    for cara in f.alphabet(document):
-        freq=[]
-        freq.append(cara)
-        nb=0
-        file = open(document, "r")
-        for line in file:
-            for letter in line:
-                if cara == letter.lower():
-                    nb+=1
-        freq.append(nb)
-        l.append(freq)
-    file.close()
-    return dict(sorted(l, key=lambda element: element[1]))
+
     
 #print(dict_frequences('textesimple.txt'))
 
