@@ -8,8 +8,8 @@ taille_alphabet = str(len(fr.alphabet(doc2)))
 
 with open(doc+"_freq.txt", "w") as file:
     file.write(taille_alphabet+"\n")
-    d = fr.dict_frequences(doc2)
-    for char in d.items():
+    l = fr.liste_frequences(doc2)
+    for char in l:
         if char[0] == "\n":
             file.write("LINE FEED "+str(char[1])+"\n")
         elif char[0] == " ":
