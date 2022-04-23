@@ -17,6 +17,11 @@ def alphabet(document):
     file.close()
     return l
 
+'''
+On créé une fonction permettant de renvoyer un dictionnaire avec le nombre d'occurences de chaque caractère trié dans l'ordre croissant des fréquences.
+Ce tri est nécessaire pour pouvoir ensuite construire l'arbre de Huffman.
+'''
+
 def dict_frequences(document):
     dic = {}
     for caractere in alphabet(document):
@@ -30,10 +35,27 @@ def dict_frequences(document):
     file.close()
     return dict(sorted(dic.items(), key=lambda frequence: frequence[1]))
     
-
+'''
+La fonction suivante nous sera utile pour générer le fichier se terminant par _freq.txt car contrairement à la précédente elle trie les caracères
+selon leur fréquence puis selon l'ordre ASCII donc cela nous permettra de créer ce fichier plus simplement.
+'''
     
-#print(dict_frequences('textesimple.txt'))
-
+def liste_frequences(document):
+    l=[]
+    for cara in alphabet(document):
+        freq=[]
+        freq.append(cara)
+        nb=0
+        file = open(document, "r")
+        for line in file:
+            for letter in line:
+                if letter == cara:
+                    nb+=1
+        freq.append(nb)
+        l.append(freq)
+    file.close()
+    l.sort(key=lambda row: (row[1], row[0]))
+    return l
 
 
 
