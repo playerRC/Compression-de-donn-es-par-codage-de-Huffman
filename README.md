@@ -10,6 +10,7 @@ Dans le cadre de mon cursus universitaire, j'ai réalisé un projet permettant d
 
 * Construction de l'arbre de Huffman
   * https://www.youtube.com/watch?v=JsTptu56GM8
+  * http://cermics.enpc.fr/polys/info1/main/node76.html
 
 * Codage des caractères et du texte
   * https://www.youtube.com/watch?v=JCOph23TQTY
@@ -18,5 +19,3 @@ Dans le cadre de mon cursus universitaire, j'ai réalisé un projet permettant d
 * Détermination du taux de compression
   * https://www.youtube.com/watch?v=co4_ahEDCho
 
-* http://cermics.enpc.fr/polys/info1/main/node76.html
-* https://python-prepa.github.io/information_theory.html
