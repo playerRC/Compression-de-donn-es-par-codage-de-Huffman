@@ -1,6 +1,10 @@
 import Frequence as fr
 
-#Etape 2
+#Etape 2: Construction de l’arbre
+
+'''
+Il faut d'abord créer une classe pour les noeuds nécessaire pour créer la classe BTree permettant de construire l'arbre de Huffman
+'''
 
 class BNode():
     def __init__(self, freq, label=None, leftChild=None, rightChild=None):
@@ -27,6 +31,7 @@ class BTree():
         node_list = [BNode(freq, label) for label, freq in fr.dict_frequences(document).items()]
 
         while len(node_list) > 1:
+            #on trie la liste selon les fréquences croissantes pour pouvoir récuperer plus facilement les 2 noeuds de fréquence minimale à chaque itération (indice 0 de la liste)
             node_list = sorted(node_list, key=lambda node: node.freq)
             left_node = node_list.pop(0)
             right_node = node_list.pop(0)
@@ -40,8 +45,3 @@ class BTree():
     def get_root(self):
         return self.root
 
-bt = BTree('exemple.txt')
-'''
-print(bt.get_root().freq)
-print(bt.get_root().getRight().getRight().getRight().label)
-'''
