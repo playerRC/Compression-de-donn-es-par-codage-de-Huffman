@@ -34,3 +34,4 @@ def nb_bits_moyen(doc):
 
 
 # pour vol_ini et final : https://www.youtube.com/watch?v=co4_ahEDCho
+#VOILA comment fork rachides
