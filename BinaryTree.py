@@ -28,6 +28,7 @@ class BTree():
 
         self.document = document
 
+        #on créé une liste de noeuds tel que chaque noeud contient le caractère et sa fréquence pour le document choisi
         node_list = [BNode(freq, label) for label, freq in fr.dict_frequences(document).items()]
 
         while len(node_list) > 1:
@@ -38,8 +39,9 @@ class BTree():
             parent_node = BNode(left_node.getOccurence() + right_node.getOccurence())
             parent_node.leftChild = left_node
             parent_node.rightChild = right_node
-            node_list.append(parent_node)       
-
+            node_list.append(parent_node)
+            
+        #le noeud racine de l'arbre sera alors le premier élément de la liste node_list
         self.root = node_list[0]
 
     def get_root(self):
