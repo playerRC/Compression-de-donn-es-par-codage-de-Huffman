@@ -7,6 +7,15 @@ doc = str(input("Quel texte voulez-vous compresser ? "))
 doc2 = doc+".txt"
 taille_alphabet = str(len(fr.alphabet(doc2)))
 
+def ordreApparitionCaractere(document)}:
+    l =[]
+    file = open(document, "r")
+    for line in file:
+        for letter in line:
+            l.append(letter)
+    file.close()
+    return l
+
 with open(doc+"_freq.txt", "w") as file:
     file.write(taille_alphabet+"\n")
     l = fr.liste_frequences(doc2)
@@ -24,7 +33,8 @@ with open(doc+"_comp.bin", "w") as file:
     compressed_text = c.codage_texte()
     file.write(compressed_text)
 
-print(f'''\nDictionnaire du nombre d'apparitions de chaque caractère: {fr.dict_frequences(doc2)}
+print(f'''\nL'ordre d'apparition des caractères dans le texte est le suivant: {ordreApparitionCaractere(doc2)}
+Dictionnaire du nombre d'apparitions de chaque caractère: {fr.dict_frequences(doc2)}
 Dictionnaire du codage de chaque caractère: {dict_codage_caractere}
 Taux de compression atteint: {cr.ratio(doc2)}
 Nombre moyen de bits de stockage d’un caractère: {cr.nb_bits_moyen(doc2)}\n'''
