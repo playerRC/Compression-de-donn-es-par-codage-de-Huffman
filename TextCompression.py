@@ -12,6 +12,7 @@ while os.path.exists(doc2) == False:
     print("\nLe fichier à compresser n'est pas dans le bon dossier\n")
     doc = str(input("Quel texte voulez-vous compresser ? "))
     doc2 = doc+".txt"
+
 taille_alphabet = str(len(fr.alphabet(doc2)))
 
 '''
