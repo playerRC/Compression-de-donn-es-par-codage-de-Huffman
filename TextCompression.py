@@ -1,3 +1,4 @@
+import os
 import Frequence as fr
 import Codage as cod
 import BinaryTree as bt
@@ -7,6 +8,10 @@ print("\n----BIENVENUE DANS LE COMPRESSEUR DE FICHIER TXT----\n")
 
 doc = str(input("Quel texte voulez-vous compresser ? "))
 doc2 = doc+".txt"
+while os.path.exists(doc2) == False:
+    print("\nLe fichier à compresser n'est pas dans le bon dossier\n")
+    doc = str(input("Quel texte voulez-vous compresser ? "))
+    doc2 = doc+".txt"
 taille_alphabet = str(len(fr.alphabet(doc2)))
 
 '''
