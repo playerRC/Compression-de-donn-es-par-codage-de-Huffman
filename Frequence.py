@@ -5,7 +5,13 @@ Created on Tue Apr  5 14:00:53 2022
 @author: faskar
 """
 
-#Etape 1
+#Etape 1: Détermination de l’alphabet et des fréquences de caractères
+
+'''
+La fonction alphabet permet de déterminer tous les caractères présents dans le texte
+Cette fonction est nécessaire pour établir un dictionnaire avec le nombre d'occurences pour chaque caractère
+Elle nous sera également utile pour afficher la taille de l’alphabet dans le fichier <nom>_freq.txt
+'''
 
 def alphabet(document):
     l=[]
