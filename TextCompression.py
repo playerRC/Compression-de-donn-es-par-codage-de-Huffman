@@ -1,6 +1,7 @@
 import Frequence as fr
 import Codage as cod
 import BinaryTree as bt
+import CompressionRatio as cr
 
 doc = str(input("Quel texte voulez-vous compresser ? "))
 doc2 = doc+".txt"
@@ -25,6 +26,6 @@ with open(doc+"_comp.bin", "w") as file:
 
 print(f'''\nDictionnaire du nombre d'apparitions de chaque caractère: {fr.dict_frequences(doc2)}
 Dictionnaire du codage de chaque caractère: {dict_codage_caractere}
-Taux de compression atteint: {tc.ratio(doc2)}
-Nombre moyen de bits de stockage d’un caractère: {tc.nb_bits_moyen(doc2)}\n'''
+Taux de compression atteint: {cr.ratio(doc2)}
+Nombre moyen de bits de stockage d’un caractère: {cr.nb_bits_moyen(doc2)}\n'''
 )
