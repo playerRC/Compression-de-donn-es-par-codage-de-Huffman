@@ -15,5 +15,8 @@ Dans le cadre de mon cursus universitaire, j'ai réalisé un projet permettant d
   * https://www.youtube.com/watch?v=JCOph23TQTY
   * https://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur
 
+* Détermination du taux de compression
+  * https://www.youtube.com/watch?v=co4_ahEDCho
+
 * http://cermics.enpc.fr/polys/info1/main/node76.html
 * https://python-prepa.github.io/information_theory.html
