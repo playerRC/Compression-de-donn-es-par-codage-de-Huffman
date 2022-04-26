@@ -1,9 +1,12 @@
+import time
 import Frequence as fr
 import Codage as cod
 import BinaryTree as bt
 import CompressionRatio as cr
 
-print("----BIENVENUE DANS LE COMPRESSEUR DE FICHIER TXT----\n")
+print("\n----BIENVENUE DANS LE COMPRESSEUR DE FICHIER TXT----\n")
+time.sleep(2)
+
 doc = str(input("Quel texte voulez-vous compresser ? "))
 doc2 = doc+".txt"
 taille_alphabet = str(len(fr.alphabet(doc2)))
