@@ -8,7 +8,7 @@ doc2 = doc+".txt"
 taille_alphabet = str(len(fr.alphabet(doc2)))
 
 '''
-La fonction suivante est utile si l'on veut décoder le fichier .bin
+La fonction suivante permet de connaître l'ordre d'apparition des caractères et est utile si l'on veut décoder le fichier .bin
 '''
 def ordreApparitionCaractere(document)}:
     l =[]
