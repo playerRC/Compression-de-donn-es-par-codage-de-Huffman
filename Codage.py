@@ -27,7 +27,5 @@ class Codage():
         return ch
 
 '''
-c = Codage(bt.BTree("exemple.txt"))
-print(c.dic_codage_caractere(c.arbre.get_root()))
-print(c.codage_texte())
+https://www.youtube.com/watch?v=JCOph23TQTY
 '''
