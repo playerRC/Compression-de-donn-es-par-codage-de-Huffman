@@ -62,3 +62,4 @@ def liste_frequences(document):
     file.close()
     l.sort(key=lambda row: (row[1], row[0]))
     return l
+
