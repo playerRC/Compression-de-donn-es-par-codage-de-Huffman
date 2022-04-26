@@ -62,12 +62,3 @@ def liste_frequences(document):
     file.close()
     l.sort(key=lambda row: (row[1], row[0]))
     return l
-
-
-
-
-# http://cermics.enpc.fr/polys/info1/main/node76.html
-# https://python-prepa.github.io/information_theory.html
-
-
-
