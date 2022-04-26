@@ -1,6 +1,6 @@
 # Data compression by Huffman coding
 
-Dans le cadre de mon cursus universitaire, j'ai réalisé un projet permettant de compresser un fichier selon le codage de Huffman.
+Dans le cadre de mon cursus universitaire, j'ai réalisé un projet permettant de compresser un fichier ".txt" selon le codage de Huffman.
 
 # Installation et utilisation
 
