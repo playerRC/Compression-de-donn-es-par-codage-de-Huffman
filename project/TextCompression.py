@@ -15,18 +15,6 @@ while os.path.exists(doc2) == False:
 
 taille_alphabet = str(len(fr.alphabet(doc2)))
 
-'''
-La fonction suivante permet de connaître l'ordre d'apparition des caractères et est utile si l'on veut décoder le fichier .bin
-'''
-def ordreApparitionCaractere(document):
-    l =[]
-    file = open(document, "r")
-    for line in file:
-        for letter in line:
-            l.append(letter)
-    file.close()
-    return l
-
 with open(doc+"_freq.txt", "w") as file:
     file.write(taille_alphabet+"\n")
     l = fr.liste_frequences(doc2)
