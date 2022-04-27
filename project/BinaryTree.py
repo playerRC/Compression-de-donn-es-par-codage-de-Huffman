@@ -45,4 +45,4 @@ class BTree():
         self.root = node_list[0]
 
     def get_root(self):
-        return self.
+        return self.root
