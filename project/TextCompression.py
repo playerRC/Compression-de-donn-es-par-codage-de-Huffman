@@ -44,8 +44,7 @@ with open(doc+"_comp.bin", "w") as file:
     compressed_text = c.codage_texte()
     file.write(compressed_text)
 
-print(f'''\nL'ordre d'apparition des caractères dans le texte est le suivant: {ordreApparitionCaractere(doc2)}
-Dictionnaire du nombre d'apparitions de chaque caractère: {fr.dict_frequences(doc2)}
+print(f'''\nDictionnaire du nombre d'apparitions de chaque caractère: {fr.dict_frequences(doc2)}
 Dictionnaire du codage de chaque caractère: {dict_codage_caractere}
 Taux de compression atteint: {cr.ratio(doc2)}
 Nombre moyen de bits de stockage d’un caractère: {cr.nb_bits_moyen(doc2)}\n'''
