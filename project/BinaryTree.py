@@ -32,7 +32,7 @@ class BTree():
         node_list = [BNode(freq, label) for label, freq in fr.dict_frequences(document).items()]
 
         while len(node_list) > 1:
-            #on trie la liste à chaque itération selon les fréquences croissantes pour pouvoir récuperer plus facilement les 2 noeuds de fréquence minimale(indice 0 de la liste)
+            #on trie la liste à chaque itération selon les fréquences croissantes
             node_list = sorted(node_list, key=lambda node: node.freq)
             left_node = node_list.pop(0)
             right_node = node_list.pop(0)
