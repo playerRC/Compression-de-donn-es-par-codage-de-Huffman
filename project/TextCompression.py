@@ -32,8 +32,8 @@ with open(doc+"_comp.bin", "w") as file:
     compressed_text = c.codage_texte()
     file.write(compressed_text)
 
-print(f'''\nDictionnaire du nombre d'apparitions de chaque caractère: {fr.dict_frequences(doc2)}
-Dictionnaire du codage de chaque caractère: {dict_codage_caractere}
+print(f'''\nDictionnaire du codage de chaque caractère: {dict_codage_caractere}\n
 Taux de compression atteint: {cr.ratio(doc2)}
-Nombre moyen de bits de stockage d’un caractère: {cr.nb_bits_moyen(doc2)}\n'''
+Nombre moyen de bits de stockage d’un caractère: {cr.nb_bits_moyen(doc2)}\n
+Texte compressé avec succès\n'''
 )
