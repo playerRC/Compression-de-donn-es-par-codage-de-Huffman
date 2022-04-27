@@ -7,7 +7,7 @@ Dans le cadre de mon cursus universitaire, j'ai réalisé un projet permettant d
 Pour pouvoir utiliser le compresseur de fichier txt, il vous suffit de télecharger tout le répertoire ou de cloner le répertoire avec la commande suivante:
  * git clone git@github.com:playerRC/Data-compression-by-Huffman-coding.git
 
-Ensuite, vous devez exécuter le fichier TextCompression.py et indiquer le nom du fichier à compresser.
+Ensuite, vous devez exécuter le fichier TextCompression.py se trouvant dans le répertoire project et indiquer le nom du fichier à compresser.
 
 # Ressources utilisées
 
